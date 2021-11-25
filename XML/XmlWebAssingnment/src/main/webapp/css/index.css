@@ -1,0 +1,105 @@
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(71, 147, 227);
+h4{
+color:white;}
+
+
+}
+.button{
+
+  color: #6033e8;
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco,
+}
+h1{
+color: #fff;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav ul li {
+	font-size: 40px;
+	height: 1.5em;
+	margin: 0.5em;
+	cursor: pointer;
+}
+
+nav ul li span {
+	color: white;
+	mix-blend-mode: difference;
+}
+
+
+
+nav ul li:hover::before {
+	transform: scale(7);
+}
+
+a {
+  color: #fff !important;
+  text-decoration: none;
+}
+.search{
+color: #fbfdff;
+ 	background: #324960;
+ 	transform: translateX(-30%);
+ 	font-size: 25px;
+ 	border-radius: 25px;
+ 	border: none;
+ 	line-height: 40px;
+ 	min-width: 160px;
+ 	cursor: pointer;
+ 	margin-left: 365;
+    margin-top: 50px;
+}
+.allCars{
+     color: #fbfdff;
+ 	background: #324960;
+ 	transform: translateX(-30%);
+ 	font-size: 25px;
+ 	border-radius: 25px;
+ 	border: none;
+ 	line-height: 40px;
+ 	min-width: 160px;
+ 	cursor: pointer;
+ 	margin-left: 365;
+    margin-top: 50px;
+ }
+ .priceRangeInfo{
+     position: relative;
+     height: 30px;
+     margin-top: 60px;
+ }
+ .priceRangeInfo label{
+     position: absolute;
+     top: -30px;
+     left: 10px;
+ }
+ .priceRangeInfo #buying_slider_min{
+     top: -40px;
+     position: absolute;
+     left: 100px;
+ }       /* moves first input field */
+ .priceRangeInfo #buying_slider_max{
+     top: -40px;
+     position: absolute;
+     left: 170px;
+ }      /* move second input field */
+ .priceRangeInfo div.ui-slider{
+     position: absolute;
+ }
+ .priceRangeInfo div:last-child{
+     position: absolute;
+     left: 0px;
+ }

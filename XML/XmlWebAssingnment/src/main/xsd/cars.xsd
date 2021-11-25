@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cars" type="carsType"/>
+  <xs:complexType name="consumptionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="type" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="carType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="manufacturer"/>
+      <xs:element type="xs:string" name="model"/>
+      <xs:element name="production-year">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="2011"/>
+            <xs:enumeration value="2013"/>
+            <xs:enumeration value="2017"/>
+            <xs:enumeration value="2019"/>
+            <xs:enumeration value="2020"/>
+            <xs:enumeration value="2018"/>
+            <xs:enumeration value="2016"/>
+            <xs:enumeration value="2012"/>
+            <xs:enumeration value="2015"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="horsepower"/>
+      <xs:element type="consumptionType" name="consumption"/>
+      <xs:element type="xs:string" name="price"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="carsType">
+    <xs:sequence>
+      <xs:element type="carType" name="car" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
